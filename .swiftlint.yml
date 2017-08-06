@@ -1,0 +1,16 @@
+included:
+  - Sources
+  - Tests
+  - Frameworks/SourcerCore/Sources
+  - Frameworks/SourcerCore/Tests
+excluded:
+  - Configurations
+  - Pods
+  - Resources
+  - build
+  - Support
+disabled_rules:
+  - trailing_whitespace
+  - nesting
+  - cyclomatic_complexity
+  - file_length

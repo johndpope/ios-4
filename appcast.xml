@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Sourcer Changelog</title>
+    <link>https://github.com/pepibumur/sourcer/raw/master/appcast.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+		<item>
+      <title>Version 0.0.1</title>
+			<description>First version of Sourcer</description>
+      <pubDate>Sun, 16 Jul 2017 18:04:00 +0000</pubDate>
+			<link>https://sourcerapp.io</link>
+      <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/pepibumur/sourcer/releases/download/0.0.1/Sourcer.zip"
+               sparkle:version="0.0.1"
+               sparkle:dsaSignature="MCwCFFpuO30bYyCvREEo2GP0mWbW6J6HAhRpdgF6RO3rrDBdwkb8d9JIZx1MFw=="
+               length="4361614"
+               type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>
