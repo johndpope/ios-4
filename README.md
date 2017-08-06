@@ -3,7 +3,7 @@ Sourcer
 
 [![Build Status](https://travis-ci.org/pepibumur/sourcer.svg?branch=master)](https://travis-ci.org/pepibumur/sourcer)
 
-GitHub `macOS` client for developers.
+GitHub `macOS` client for open sourcers.
 
 ### Requirements
 - Xcode 9
