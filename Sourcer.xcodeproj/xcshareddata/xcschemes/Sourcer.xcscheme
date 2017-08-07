@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "043CB62C1F18E5590097F577"
-               BuildableName = "SourcerCore.framework"
-               BlueprintName = "SourcerCore"
-               ReferencedContainer = "container:Frameworks/SourcerCore/SourcerCore.xcodeproj">
+               BuildableName = "Open.framework"
+               BlueprintName = "Open"
+               ReferencedContainer = "container:Frameworks/Open/Open.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

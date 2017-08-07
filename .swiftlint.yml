@@ -1,8 +1,8 @@
 included:
   - Sources
   - Tests
-  - Frameworks/SourcerCore/Sources
-  - Frameworks/SourcerCore/Tests
+  - Frameworks/Open/Sources
+  - Frameworks/Open/Tests
 excluded:
   - Configurations
   - Pods

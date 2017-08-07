@@ -25,8 +25,8 @@
 		0469BF161F1D43AF002BF66B /* LoginWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469BF141F1D43AF002BF66B /* LoginWindowController.xib */; };
 		0469BF191F1D43EB002BF66B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469BF171F1D43EB002BF66B /* LoginViewController.swift */; };
 		0469BF1A1F1D43EB002BF66B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0469BF181F1D43EB002BF66B /* LoginViewController.xib */; };
-		049B1F401F18E6E2001F946B /* SourcerCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B1F3F1F18E6E2001F946B /* SourcerCore.framework */; };
-		049B1F411F18E6E2001F946B /* SourcerCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 049B1F3F1F18E6E2001F946B /* SourcerCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		049B1F401F18E6E2001F946B /* Open.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049B1F3F1F18E6E2001F946B /* Open.framework */; };
+		049B1F411F18E6E2001F946B /* Open.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 049B1F3F1F18E6E2001F946B /* Open.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49F5DD0345FA223C90D14A7A /* Pods_SourcerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168A4773A1D8462206800B8D /* Pods_SourcerTests.framework */; };
 		4C968669A9E88FFAD66DBF1D /* Pods_Sourcer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21AE1F22D07F64378F1798A /* Pods_Sourcer.framework */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				041275D41F1CF17E00F88822 /* RxCocoa.framework in Embed Frameworks */,
-				049B1F411F18E6E2001F946B /* SourcerCore.framework in Embed Frameworks */,
+				049B1F411F18E6E2001F946B /* Open.framework in Embed Frameworks */,
 				041275D61F1CF17E00F88822 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -105,7 +105,7 @@
 		0469BF141F1D43AF002BF66B /* LoginWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginWindowController.xib; sourceTree = "<group>"; };
 		0469BF171F1D43EB002BF66B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0469BF181F1D43EB002BF66B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		049B1F3F1F18E6E2001F946B /* SourcerCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SourcerCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		049B1F3F1F18E6E2001F946B /* Open.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Open.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E445C8B4AF8B3556C1B70D /* Pods-Sourcer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcer/Pods-Sourcer.release.xcconfig"; sourceTree = "<group>"; };
 		168A4773A1D8462206800B8D /* Pods_SourcerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SourcerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EE79B37C4CB412A5FBB31A /* Pods-SourcerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SourcerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SourcerTests/Pods-SourcerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 				041275D11F1CF17500F88822 /* RxCocoa.framework in Frameworks */,
 				4C968669A9E88FFAD66DBF1D /* Pods_Sourcer.framework in Frameworks */,
 				041275DE1F1CF83800F88822 /* Crashlytics.framework in Frameworks */,
-				049B1F401F18E6E2001F946B /* SourcerCore.framework in Frameworks */,
+				049B1F401F18E6E2001F946B /* Open.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +360,7 @@
 				041275DC1F1CF83800F88822 /* Crashlytics.framework */,
 				041275CF1F1CF17500F88822 /* RxCocoa.framework */,
 				041275D01F1CF17500F88822 /* RxSwift.framework */,
-				049B1F3F1F18E6E2001F946B /* SourcerCore.framework */,
+				049B1F3F1F18E6E2001F946B /* Open.framework */,
 				A21AE1F22D07F64378F1798A /* Pods_Sourcer.framework */,
 				168A4773A1D8462206800B8D /* Pods_SourcerTests.framework */,
 			);

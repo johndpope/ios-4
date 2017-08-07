@@ -1,5 +1,5 @@
 import Foundation
 import Crashlytics
-import SourcerCore
+import Open
 
 extension Crashlytics: TechLogging {}

@@ -14,7 +14,7 @@ namespace :build do
     desc "Build core framework"
     task :core do
       command = []
-      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme SourcerCore"
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open"
       command << "-config Debug"
       command << "clean build"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
@@ -41,7 +41,7 @@ namespace :test do
     desc "Test core framework"
     task :core do
       command = []
-      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme SourcerCore"
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open"
       command << "-config Debug"
       command << "clean test"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"

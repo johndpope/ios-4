@@ -5,7 +5,7 @@
       location = "group:Sourcer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Frameworks/SourcerCore/SourcerCore.xcodeproj">
+      location = "group:Frameworks/Open/Open.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

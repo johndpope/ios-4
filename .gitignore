@@ -249,4 +249,4 @@ playground.xcworkspace
 dsa_priv.pem
 Sourcer.zip
 Carthage/
-Frameworks/SourcerCore/SourcerCore.framework
+Frameworks/Open/Open.framework
