@@ -95,6 +95,7 @@
 		043CB6201F18E3B00097F577 /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
 		043CB6211F18E3B00097F577 /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		043CB6221F18E3B00097F577 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		043EADF21F39D6F80051E1AB /* Open-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Open-Base.xcconfig"; sourceTree = "<group>"; };
 		045B79C61F1D074E00C992B2 /* Crashlytics+TechLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crashlytics+TechLogging.swift"; sourceTree = "<group>"; };
 		045B79CB1F1D081100C992B2 /* Answers+Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answers+Analytics.swift"; sourceTree = "<group>"; };
 		045FC2C61F1BC2D300E9AED0 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
@@ -243,6 +244,7 @@
 				043CB6171F18E3B00097F577 /* README.md */,
 				043CB6071F18E3B00097F577 /* tvOS */,
 				043CB6181F18E3B00097F577 /* watchOS */,
+				043EADF21F39D6F80051E1AB /* Open-Base.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";

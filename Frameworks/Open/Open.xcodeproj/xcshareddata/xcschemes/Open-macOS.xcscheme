@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "043CB62C1F18E5590097F577"
                BuildableName = "Open.framework"
-               BlueprintName = "Open"
+               BlueprintName = "Open-macOS"
                ReferencedContainer = "container:Open.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "043CB6351F18E5590097F577"
-               BuildableName = "OpenTests.xctest"
-               BlueprintName = "OpenTests"
+               BuildableName = "OpenTests-macOS.xctest"
+               BlueprintName = "OpenTests-macOS"
                ReferencedContainer = "container:Open.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "043CB62C1F18E5590097F577"
             BuildableName = "Open.framework"
-            BlueprintName = "Open"
+            BlueprintName = "Open-macOS"
             ReferencedContainer = "container:Open.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -68,7 +68,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "043CB62C1F18E5590097F577"
             BuildableName = "Open.framework"
-            BlueprintName = "Open"
+            BlueprintName = "Open-macOS"
             ReferencedContainer = "container:Open.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -86,7 +86,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "043CB62C1F18E5590097F577"
             BuildableName = "Open.framework"
-            BlueprintName = "Open"
+            BlueprintName = "Open-macOS"
             ReferencedContainer = "container:Open.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

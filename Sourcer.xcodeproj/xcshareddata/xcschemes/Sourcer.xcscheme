@@ -30,7 +30,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "043CB62C1F18E5590097F577"
                BuildableName = "Open.framework"
-               BlueprintName = "Open"
+               BlueprintName = "Open-macOS"
                ReferencedContainer = "container:Frameworks/Open/Open.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

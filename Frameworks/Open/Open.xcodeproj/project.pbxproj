@@ -21,7 +21,8 @@
 		043CB64E1F18E5AD0097F577 /* Open.h in Headers */ = {isa = PBXBuildFile; fileRef = 043CB64A1F18E5850097F577 /* Open.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		045B79CA1F1D07E800C992B2 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B79C91F1D07E800C992B2 /* Analytics.swift */; };
 		0469BF0B1F1D1D1E002BF66B /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0469BF0A1F1D1D1E002BF66B /* Dependencies.swift */; };
-		049719361F38B68400E0E001 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 041275CD1F1CF16000F88822 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		046CA8E81F3C44120084D5B1 /* Open.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046CA8DF1F3C44120084D5B1 /* Open.framework */; };
+		04DBA4B41F3C47990063F5F0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DBA4B31F3C478D0063F5F0 /* RxSwift.framework */; };
 		04E2509C1F1D05ED007A31D9 /* TechLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2509B1F1D05ED007A31D9 /* TechLogging.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,21 +34,14 @@
 			remoteGlobalIDString = 043CB62C1F18E5590097F577;
 			remoteInfo = Open;
 		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		049719351F38B67A00E0E001 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				049719361F38B68400E0E001 /* RxSwift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+		046CA8E91F3C44120084D5B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043CB6241F18E5590097F577 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046CA8DE1F3C44120084D5B1;
+			remoteInfo = Open;
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		041275CD1F1CF16000F88822 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
@@ -60,7 +54,7 @@
 		04134D6C1F1CDBB000FC9393 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		04134D6F1F1CDBE900FC9393 /* Sourcer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sourcer.xcdatamodel; sourceTree = "<group>"; };
 		043CB62D1F18E5590097F577 /* Open.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Open.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		043CB6361F18E5590097F577 /* OpenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		043CB6361F18E5590097F577 /* OpenTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		043CB6481F18E5850097F577 /* OpenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTests.swift; sourceTree = "<group>"; };
 		043CB64A1F18E5850097F577 /* Open.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Open.h; sourceTree = "<group>"; };
 		043CB64B1F18E5890097F577 /* Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tests.plist; sourceTree = "<group>"; };
@@ -93,6 +87,10 @@
 		043D00F61F18E6310062ABBD /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		045B79C91F1D07E800C992B2 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		0469BF0A1F1D1D1E002BF66B /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		046CA8DF1F3C44120084D5B1 /* Open.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Open.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		046CA8E71F3C44120084D5B1 /* OpenTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		046CA8F61F3C44EC0084D5B1 /* Open-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Open-Base.xcconfig"; sourceTree = "<group>"; };
+		04DBA4B31F3C478D0063F5F0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		04E2509B1F1D05ED007A31D9 /* TechLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechLogging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +108,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				043CB6371F18E5590097F577 /* Open.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046CA8DB1F3C44120084D5B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DBA4B41F3C47990063F5F0 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046CA8E41F3C44120084D5B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046CA8E81F3C44120084D5B1 /* Open.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +155,8 @@
 		04134D711F1CE2FD00FC9393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				041275CD1F1CF16000F88822 /* RxSwift.framework */,
+				04DBA4AD1F3C46DE0063F5F0 /* iOS */,
+				046CA8BD1F3C432D0084D5B1 /* macOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				043CB62D1F18E5590097F577 /* Open.framework */,
-				043CB6361F18E5590097F577 /* OpenTests.xctest */,
+				043CB6361F18E5590097F577 /* OpenTests-macOS.xctest */,
+				046CA8DF1F3C44120084D5B1 /* Open.framework */,
+				046CA8E71F3C44120084D5B1 /* OpenTests-iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +209,7 @@
 		043D00D51F18E6310062ABBD /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				046CA8F61F3C44EC0084D5B1 /* Open-Base.xcconfig */,
 				043D00D61F18E6310062ABBD /* Base */,
 				043D00E11F18E6310062ABBD /* iOS */,
 				043D00E61F18E6310062ABBD /* Mac OS X */,
@@ -295,6 +313,22 @@
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
+		046CA8BD1F3C432D0084D5B1 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				041275CD1F1CF16000F88822 /* RxSwift.framework */,
+			);
+			name = macOS;
+			sourceTree = "<group>";
+		};
+		04DBA4AD1F3C46DE0063F5F0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				04DBA4B31F3C478D0063F5F0 /* RxSwift.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		04E2509A1F1D05E4007A31D9 /* TechLogger */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,12 +348,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		046CA8DC1F3C44120084D5B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		043CB62C1F18E5590097F577 /* Open */ = {
+		043CB62C1F18E5590097F577 /* Open-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 043CB6411F18E5590097F577 /* Build configuration list for PBXNativeTarget "Open" */;
+			buildConfigurationList = 043CB6411F18E5590097F577 /* Build configuration list for PBXNativeTarget "Open-macOS" */;
 			buildPhases = (
 				043CB6281F18E5590097F577 /* Sources */,
 				043CB6291F18E5590097F577 /* Frameworks */,
@@ -331,28 +372,65 @@
 			);
 			dependencies = (
 			);
-			name = Open;
+			name = "Open-macOS";
 			productName = Open;
 			productReference = 043CB62D1F18E5590097F577 /* Open.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		043CB6351F18E5590097F577 /* OpenTests */ = {
+		043CB6351F18E5590097F577 /* OpenTests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 043CB6441F18E5590097F577 /* Build configuration list for PBXNativeTarget "OpenTests" */;
+			buildConfigurationList = 043CB6441F18E5590097F577 /* Build configuration list for PBXNativeTarget "OpenTests-macOS" */;
 			buildPhases = (
 				043CB6321F18E5590097F577 /* Sources */,
 				043CB6331F18E5590097F577 /* Frameworks */,
 				043CB6341F18E5590097F577 /* Resources */,
-				049719351F38B67A00E0E001 /* Embed Frameworks */,
+				04D1914A1F39D5CE00D03600 /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				043CB6391F18E5590097F577 /* PBXTargetDependency */,
 			);
-			name = OpenTests;
+			name = "OpenTests-macOS";
 			productName = OpenTests;
-			productReference = 043CB6361F18E5590097F577 /* OpenTests.xctest */;
+			productReference = 043CB6361F18E5590097F577 /* OpenTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		046CA8DE1F3C44120084D5B1 /* Open-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046CA8F01F3C44120084D5B1 /* Build configuration list for PBXNativeTarget "Open-iOS" */;
+			buildPhases = (
+				046CA8DA1F3C44120084D5B1 /* Sources */,
+				046CA8DB1F3C44120084D5B1 /* Frameworks */,
+				046CA8DC1F3C44120084D5B1 /* Headers */,
+				046CA8DD1F3C44120084D5B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Open-iOS";
+			productName = Open;
+			productReference = 046CA8DF1F3C44120084D5B1 /* Open.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		046CA8E61F3C44120084D5B1 /* OpenTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046CA8F31F3C44120084D5B1 /* Build configuration list for PBXNativeTarget "OpenTests-iOS" */;
+			buildPhases = (
+				046CA8E31F3C44120084D5B1 /* Sources */,
+				046CA8E41F3C44120084D5B1 /* Frameworks */,
+				046CA8E51F3C44120084D5B1 /* Resources */,
+				04DBA4B11F3C47300063F5F0 /* Embed Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046CA8EA1F3C44120084D5B1 /* PBXTargetDependency */,
+			);
+			name = "OpenTests-iOS";
+			productName = OpenTests;
+			productReference = 046CA8E71F3C44120084D5B1 /* OpenTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -372,6 +450,12 @@
 					043CB6351F18E5590097F577 = {
 						CreatedOnToolsVersion = 9.0;
 					};
+					046CA8DE1F3C44120084D5B1 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					046CA8E61F3C44120084D5B1 = {
+						CreatedOnToolsVersion = 9.0;
+					};
 				};
 			};
 			buildConfigurationList = 043CB6271F18E5590097F577 /* Build configuration list for PBXProject "Open" */;
@@ -386,8 +470,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				043CB62C1F18E5590097F577 /* Open */,
-				043CB6351F18E5590097F577 /* OpenTests */,
+				043CB62C1F18E5590097F577 /* Open-macOS */,
+				043CB6351F18E5590097F577 /* OpenTests-macOS */,
+				046CA8DE1F3C44120084D5B1 /* Open-iOS */,
+				046CA8E61F3C44120084D5B1 /* OpenTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -401,6 +487,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		043CB6341F18E5590097F577 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046CA8DD1F3C44120084D5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046CA8E51F3C44120084D5B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,6 +523,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint lint --config ../../.swiftlint.yml\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		04D1914A1F39D5CE00D03600 /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../../Carthage/Build/Mac/RxSwift.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		04DBA4B11F3C47300063F5F0 /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../../Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -453,13 +585,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		046CA8DA1F3C44120084D5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046CA8E31F3C44120084D5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		043CB6391F18E5590097F577 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 043CB62C1F18E5590097F577 /* Open */;
+			target = 043CB62C1F18E5590097F577 /* Open-macOS */;
 			targetProxy = 043CB6381F18E5590097F577 /* PBXContainerItemProxy */;
+		};
+		046CA8EA1F3C44120084D5B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046CA8DE1F3C44120084D5B1 /* Open-iOS */;
+			targetProxy = 046CA8E91F3C44120084D5B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -494,11 +645,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = U6LC622NKF;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -556,11 +705,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = U6LC622NKF;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -585,17 +732,11 @@
 			baseConfigurationReference = 043D00EA1F18E6310062ABBD /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.Open;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -605,17 +746,11 @@
 			baseConfigurationReference = 043D00EA1F18E6310062ABBD /* Mac-Framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.Open;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -624,7 +759,6 @@
 			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.OpenTests;
@@ -637,11 +771,62 @@
 			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.OpenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		046CA8F11F3C44120084D5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043D00E41F18E6310062ABBD /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = es.ppinera.Open;
+			};
+			name = Debug;
+		};
+		046CA8F21F3C44120084D5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043D00E41F18E6310062ABBD /* iOS-Framework.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = es.ppinera.Open;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046CA8F41F3C44120084D5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
+				INFOPLIST_FILE = Tests.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.ppinera.OpenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		046CA8F51F3C44120084D5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
+				INFOPLIST_FILE = Tests.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.ppinera.OpenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -657,7 +842,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		043CB6411F18E5590097F577 /* Build configuration list for PBXNativeTarget "Open" */ = {
+		043CB6411F18E5590097F577 /* Build configuration list for PBXNativeTarget "Open-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				043CB6421F18E5590097F577 /* Debug */,
@@ -666,11 +851,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		043CB6441F18E5590097F577 /* Build configuration list for PBXNativeTarget "OpenTests" */ = {
+		043CB6441F18E5590097F577 /* Build configuration list for PBXNativeTarget "OpenTests-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				043CB6451F18E5590097F577 /* Debug */,
 				043CB6461F18E5590097F577 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		046CA8F01F3C44120084D5B1 /* Build configuration list for PBXNativeTarget "Open-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046CA8F11F3C44120084D5B1 /* Debug */,
+				046CA8F21F3C44120084D5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		046CA8F31F3C44120084D5B1 /* Build configuration list for PBXNativeTarget "OpenTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046CA8F41F3C44120084D5B1 /* Debug */,
+				046CA8F51F3C44120084D5B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
