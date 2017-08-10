@@ -11,19 +11,46 @@ namespace :build do
       system command.join(" ") || abort
     end
 
-    desc "Build core framework"
-    task :core do
+    desc "Build Open framework for macOS"
+    task :open_macos do
       command = []
-      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open"
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-macOS"
       command << "-config Debug"
       command << "clean build"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
       system command.join(" ") || abort
     end
+
+    desc "Build Open framework for iOS"
+    task :open_ios do
+      command = []
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-iOS"
+      command << "-config Debug"
+      command << "clean build"
+      command << "| xcpretty && exit ${PIPESTATUS[0]}"
+      system command.join(" ") || abort
+    end
+
+    desc "Build Open framework for watchOS"
+    task :open_watchos do
+      command = []
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-watchOS"
+      command << "-config Debug"
+      command << "clean build"
+      command << "| xcpretty && exit ${PIPESTATUS[0]}"
+      system command.join(" ") || abort
+    end
+
+    desc "Build Open framework for all platforms"
+    task :open_all do
+      Rake::Task["build:open_macos"].invoke
+      Rake::Task["build:open_ios"].invoke
+      Rake::Task["build:watchos"].invoke
+    end
 end
 
 desc "Performs all necessary tasks for CI"
-task :ci => ["test:app", "test:core"] do
+task :ci => ["build:open_all", "test:open_all", "test:app"] do
   system "swiftlint" || abort
 end
 
@@ -38,14 +65,31 @@ namespace :test do
       system command.join(" ") || abort
     end
 
-    desc "Test core framework"
-    task :core do
+    desc "Test Open framework for macOS"
+    task :open_macos do
       command = []
-      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open"
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-macOS"
       command << "-config Debug"
       command << "clean test"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
       system command.join(" ") || abort
+    end
+
+    desc "Test Open framework for iOS"
+    task :open_ios do
+      command = []
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-iOS"
+      command << "-destination 'platform=iOS Simulator,name=iPhone 6,OS=11.0'"
+      command << "-config Debug"
+      command << "clean test"
+      command << "| xcpretty && exit ${PIPESTATUS[0]}"
+      system command.join(" ") || abort
+    end
+
+    desc "Test Open framework for all platforms"
+    task :open_all do
+      Rake::Task["test:open_macos"].invoke
+      Rake::Task["test:open_ios"].invoke
     end
 end
 
