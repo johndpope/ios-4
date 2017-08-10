@@ -45,7 +45,7 @@ namespace :build do
     task :open_all do
       Rake::Task["build:open_macos"].invoke
       Rake::Task["build:open_ios"].invoke
-      Rake::Task["build:watchos"].invoke
+      Rake::Task["build:open_watchos"].invoke
     end
 end
 
