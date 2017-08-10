@@ -91,6 +91,8 @@
 		046CA8E71F3C44120084D5B1 /* OpenTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		046CA8F61F3C44EC0084D5B1 /* Open-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Open-Base.xcconfig"; sourceTree = "<group>"; };
 		04DBA4B31F3C478D0063F5F0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		04DBA4BC1F3C48EA0063F5F0 /* Open.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Open.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DBA4C51F3C4A3F0063F5F0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/watchOS/RxSwift.framework; sourceTree = "<group>"; };
 		04E2509B1F1D05ED007A31D9 /* TechLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechLogging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04DBA4B81F3C48EA0063F5F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -155,6 +164,7 @@
 		04134D711F1CE2FD00FC9393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04DBA4C41F3C4A240063F5F0 /* watchOS */,
 				04DBA4AD1F3C46DE0063F5F0 /* iOS */,
 				046CA8BD1F3C432D0084D5B1 /* macOS */,
 			);
@@ -181,6 +191,7 @@
 				043CB6361F18E5590097F577 /* OpenTests-macOS.xctest */,
 				046CA8DF1F3C44120084D5B1 /* Open.framework */,
 				046CA8E71F3C44120084D5B1 /* OpenTests-iOS.xctest */,
+				04DBA4BC1F3C48EA0063F5F0 /* Open.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,6 +340,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		04DBA4C41F3C4A240063F5F0 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				04DBA4C51F3C4A3F0063F5F0 /* RxSwift.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
 		04E2509A1F1D05E4007A31D9 /* TechLogger */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +368,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		046CA8DC1F3C44120084D5B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DBA4B91F3C48EA0063F5F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -433,6 +459,24 @@
 			productReference = 046CA8E71F3C44120084D5B1 /* OpenTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04DBA4BB1F3C48EA0063F5F0 /* Open-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DBA4C11F3C48EB0063F5F0 /* Build configuration list for PBXNativeTarget "Open-watchOS" */;
+			buildPhases = (
+				04DBA4B71F3C48EA0063F5F0 /* Sources */,
+				04DBA4B81F3C48EA0063F5F0 /* Frameworks */,
+				04DBA4B91F3C48EA0063F5F0 /* Headers */,
+				04DBA4BA1F3C48EA0063F5F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Open-watchOS";
+			productName = Open;
+			productReference = 04DBA4BC1F3C48EA0063F5F0 /* Open.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -456,6 +500,9 @@
 					046CA8E61F3C44120084D5B1 = {
 						CreatedOnToolsVersion = 9.0;
 					};
+					04DBA4BB1F3C48EA0063F5F0 = {
+						CreatedOnToolsVersion = 9.0;
+					};
 				};
 			};
 			buildConfigurationList = 043CB6271F18E5590097F577 /* Build configuration list for PBXProject "Open" */;
@@ -474,6 +521,7 @@
 				043CB6351F18E5590097F577 /* OpenTests-macOS */,
 				046CA8DE1F3C44120084D5B1 /* Open-iOS */,
 				046CA8E61F3C44120084D5B1 /* OpenTests-iOS */,
+				04DBA4BB1F3C48EA0063F5F0 /* Open-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -501,6 +549,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		046CA8E51F3C44120084D5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DBA4BA1F3C48EA0063F5F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -599,6 +654,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04DBA4B71F3C48EA0063F5F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -645,7 +707,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -664,7 +725,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -705,7 +765,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -718,7 +777,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -804,7 +862,7 @@
 			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -819,7 +877,7 @@
 			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -827,6 +885,30 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04DBA4C21F3C48EB0063F5F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043D00F51F18E6310062ABBD /* watchOS-Framework.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/watchOS";
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = es.ppinera.Open;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Debug;
+		};
+		04DBA4C31F3C48EB0063F5F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043D00F51F18E6310062ABBD /* watchOS-Framework.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/watchOS";
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = es.ppinera.Open;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
 			};
 			name = Release;
 		};
@@ -874,6 +956,15 @@
 			buildConfigurations = (
 				046CA8F41F3C44120084D5B1 /* Debug */,
 				046CA8F51F3C44120084D5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		04DBA4C11F3C48EB0063F5F0 /* Build configuration list for PBXNativeTarget "Open-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DBA4C21F3C48EB0063F5F0 /* Debug */,
+				04DBA4C31F3C48EB0063F5F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
