@@ -1,10 +1,33 @@
 require "colorize"
 
 namespace :build do
-    desc "Build app"
-    task :app do
+    desc "Build app for macOS"
+    task :app_macos do
       command = []
-      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Sourcer"
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Sourcer-macOS"
+      command << "-config Debug"
+      command << "clean build"
+      command << "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO"
+      command << "| xcpretty && exit ${PIPESTATUS[0]}"
+      system command.join(" ") || abort
+    end
+
+    desc "Build app for iOS"
+    task :app_ios do
+      command = []
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Sourcer-iOS"
+      command << "-config Debug"
+      command << "clean build"
+      command << "-destination 'platform=iOS Simulator,name=iPhone 6,OS=11.0'"
+      command << "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO"
+      command << "| xcpretty && exit ${PIPESTATUS[0]}"
+      system command.join(" ") || abort
+    end
+
+    desc "Build app for watchOS"
+    task :app_watchos do
+      command = []
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Sourcer-watchOS"
       command << "-config Debug"
       command << "clean build"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
@@ -27,6 +50,7 @@ namespace :build do
       command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-iOS"
       command << "-config Debug"
       command << "clean build"
+      command << "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
       system command.join(" ") || abort
     end
@@ -37,6 +61,7 @@ namespace :build do
       command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-watchOS"
       command << "-config Debug"
       command << "clean build"
+      command << "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
       system command.join(" ") || abort
     end
@@ -49,18 +74,34 @@ namespace :build do
     end
 end
 
-desc "Performs all necessary tasks for CI"
-task :ci => ["build:open_all", "test:open_all", "test:app"] do
+task :lint do
   system "swiftlint" || abort
 end
 
+desc "Performs all necessary tasks for CI"
+task :ci => ["build:open_all", "test:open_all", "test:app_ios", "test:app_macos", "lint"] do
+end
+
 namespace :test do
-    desc "Test app"
-    task :app do
+    desc "Test app for macOS"
+    task :app_macos do
       command = []
-      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Sourcer"
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Sourcer-macOS"
       command << "-config Debug"
       command << "clean test"
+      command << "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO"
+      command << "| xcpretty && exit ${PIPESTATUS[0]}"
+      system command.join(" ") || abort
+    end
+
+    desc "Test app for iOS"
+    task :app_ios do
+      command = []
+      command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Sourcer-iOS"
+      command << "-config Debug"
+      command << "clean test"
+      command << "-destination 'platform=iOS Simulator,name=iPhone 6,OS=11.0'"
+      command << "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
       system command.join(" ") || abort
     end
@@ -71,6 +112,7 @@ namespace :test do
       command << "xcodebuild -workspace Sourcer.xcworkspace -scheme Open-macOS"
       command << "-config Debug"
       command << "clean test"
+      command << "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO"
       command << "| xcpretty && exit ${PIPESTATUS[0]}"
       system command.join(" ") || abort
     end

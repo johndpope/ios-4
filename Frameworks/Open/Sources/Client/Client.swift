@@ -35,7 +35,7 @@ public class Client {
         request.allHTTPHeaderFields = request.allHTTPHeaderFields ?? [:]
         request.allHTTPHeaderFields?["Accept"] = "application/vnd.github.v3+json"
         request = requestAdapter(request)
-        let task = requestDispatcher(request) { (data, response, error) in
+        let task = requestDispatcher(request) { (_, _, _) in
             
         }
         //        let task = session.dataTask(with: request) { (data, response, error) in
