@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "01CEF967F5301C74143900DCE2116E9A"
+               BuildableName = "Pods_Sourcer_iOS.framework"
+               BlueprintName = "Pods-Sourcer-iOS"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "046CA8DE1F3C44120084D5B1"
                BuildableName = "Open.framework"
                BlueprintName = "Open-iOS"
@@ -32,6 +46,20 @@
                BuildableName = "Sourcer.app"
                BlueprintName = "Sourcer-iOS"
                ReferencedContainer = "container:Sourcer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "96538B9BF092465093A91D7F95C7D563"
+               BuildableName = "Pods_Sourcer_iOSTests.framework"
+               BlueprintName = "Pods-Sourcer-iOSTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
