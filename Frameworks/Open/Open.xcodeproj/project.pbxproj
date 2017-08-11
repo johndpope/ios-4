@@ -48,6 +48,8 @@
 		04FE6B541F3CDAE2003FDB93 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04134D671F1CD4A500FC9393 /* Response.swift */; };
 		04FE6B551F3CDAE6003FDB93 /* WebLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04134D691F1CD70500FC9393 /* WebLinking.swift */; };
 		04FE6B561F3CDAE7003FDB93 /* WebLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04134D691F1CD70500FC9393 /* WebLinking.swift */; };
+		04FF9A091F3D9CF2006F813A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FF9A081F3D9CEF006F813A /* RxTest.framework */; };
+		04FF9A0C1F3D9D52006F813A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FF9A0B1F3D9D4F006F813A /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		04DBA4BC1F3C48EA0063F5F0 /* Open.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Open.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DBA4C51F3C4A3F0063F5F0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../../Carthage/Build/watchOS/RxSwift.framework; sourceTree = "<group>"; };
 		04E2509B1F1D05ED007A31D9 /* TechLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechLogging.swift; sourceTree = "<group>"; };
+		04FF9A081F3D9CEF006F813A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = ../../Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		04FF9A0B1F3D9D4F006F813A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = ../../Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF9A0C1F3D9D52006F813A /* RxTest.framework in Frameworks */,
 				043CB6371F18E5590097F577 /* Open.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF9A091F3D9CF2006F813A /* RxTest.framework in Frameworks */,
 				046CA8E81F3C44120084D5B1 /* Open.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +377,7 @@
 		046CA8BD1F3C432D0084D5B1 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				04FF9A0B1F3D9D4F006F813A /* RxTest.framework */,
 				041275CD1F1CF16000F88822 /* RxSwift.framework */,
 			);
 			name = macOS;
@@ -379,6 +386,7 @@
 		04DBA4AD1F3C46DE0063F5F0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				04FF9A081F3D9CEF006F813A /* RxTest.framework */,
 				04DBA4B31F3C478D0063F5F0 /* RxSwift.framework */,
 			);
 			name = iOS;
@@ -631,10 +639,12 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/../../Carthage/Build/Mac/RxSwift.framework",
+				"$(SRCROOT)/../../Carthage/Build/Mac/RxTest.framework",
 			);
 			name = "Embed Carthage Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -647,10 +657,12 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/../../Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/../../Carthage/Build/iOS/RxTest.framework",
 			);
 			name = "Embed Carthage Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -886,6 +898,7 @@
 			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/Mac";
 				INFOPLIST_FILE = Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.OpenTests;
@@ -898,6 +911,7 @@
 			baseConfigurationReference = 043D00DC1F18E6310062ABBD /* Test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/Mac";
 				INFOPLIST_FILE = Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.OpenTests;
@@ -932,7 +946,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
 				INFOPLIST_FILE = Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -950,7 +964,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Carthage/Build/iOS";
 				INFOPLIST_FILE = Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

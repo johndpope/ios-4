@@ -47,6 +47,8 @@
 		04FF99F61F3D98DE006F813A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FF99E81F3D987B006F813A /* Assets.xcassets */; };
 		04FF99FC1F3D9B23006F813A /* Open.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FF99FB1F3D9B04006F813A /* Open.framework */; };
 		04FF99FE1F3D9B26006F813A /* Open.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04FF99FB1F3D9B04006F813A /* Open.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04FF9A041F3D9C14006F813A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FF9A031F3D9C0B006F813A /* RxTest.framework */; };
+		04FF9A051F3D9C62006F813A /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FF9A011F3D9BDE006F813A /* RxTest.framework */; };
 		14964DF37E7D9E7FDFDFAC8B /* Pods_Sourcer_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C43F84840CAFA7B8050BE76 /* Pods_Sourcer_iOSTests.framework */; };
 		540F88211F4AD944A6BD2B87 /* Pods_Sourcer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE81032FEB37D50395ADBFC8 /* Pods_Sourcer.framework */; };
 		5D702D7168804E2DC6FD307E /* Pods_Sourcer_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7752FF6510C6537283EE2D9B /* Pods_Sourcer_iOS.framework */; };
@@ -239,6 +241,8 @@
 		04FF99EE1F3D987B006F813A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		04FF99EF1F3D987B006F813A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		04FF99FB1F3D9B04006F813A /* Open.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Open.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FF9A011F3D9BDE006F813A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		04FF9A031F3D9C0B006F813A /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
 		24EE79B37C4CB412A5FBB31A /* Pods-SourcerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SourcerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SourcerTests/Pods-SourcerTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C43F84840CAFA7B8050BE76 /* Pods_Sourcer_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sourcer_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C488476E37461D8D22D0F9F /* Pods-Sourcer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sourcer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sourcer/Pods-Sourcer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF9A051F3D9C62006F813A /* RxTest.framework in Frameworks */,
 				14964DF37E7D9E7FDFDFAC8B /* Pods_Sourcer_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FF9A041F3D9C14006F813A /* RxTest.framework in Frameworks */,
 				FDF673AE8CCD863B55A1175C /* Pods_SourcerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +576,7 @@
 		04FF99881F3D841E006F813A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				04FF9A011F3D9BDE006F813A /* RxTest.framework */,
 				04FF999D1F3D86A2006F813A /* RxCocoa.framework */,
 				04FF99991F3D8601006F813A /* Open.framework */,
 			);
@@ -579,6 +586,7 @@
 		04FF998A1F3D8439006F813A /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				04FF9A031F3D9C0B006F813A /* RxTest.framework */,
 				041275CF1F1CF17500F88822 /* RxCocoa.framework */,
 				041275D01F1CF17500F88822 /* RxSwift.framework */,
 				04FF998E1F3D8446006F813A /* Fabric.framework */,
@@ -1098,11 +1106,13 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/RxTest.framework",
 			);
 			name = "Embed Carthage Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1116,11 +1126,13 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 			);
 			name = "Embed Carthage Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1502,6 +1514,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS/Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1522,6 +1538,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS/Tests.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1726,6 +1746,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RTGNQ99L59;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = macOS/Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.SourcerTests;
@@ -1743,6 +1767,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RTGNQ99L59;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = macOS/Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.caramba.SourcerTests;
